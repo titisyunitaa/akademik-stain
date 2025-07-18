@@ -51,7 +51,7 @@ class Auth extends CI_Controller {
 					}elseif($user['role_id'] == 2){
 						redirect('admin');
 					}else{
-                        redirect('mahasiswa');
+                        redirect('user');
                     }
 
 					var_dump($this->session->userdata()); die;
@@ -61,7 +61,7 @@ class Auth extends CI_Controller {
 					$this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">
 							Password Anda Salah
 							</div>');
-			redirect('auth');
+						redirect('auth');
 				}
 
 			}else{
@@ -81,6 +81,8 @@ class Auth extends CI_Controller {
 	}
 
     public function logout(){
+
+		//membersihkan session
 		$this->session->unset_userdata('username');
 		$this->session->unset_userdata('role_id');
 
