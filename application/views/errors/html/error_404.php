@@ -30,7 +30,7 @@
 	<img src="<?php echo base_url('assets/img/404-error.png')?>" alt="" class="error-img img-fluid mb-4">
     <p class="lead">Maaf, halaman yang Anda cari tidak tersedia atau sedang dalam pengembangan.</p>
     <a href="<?= base_url() ?>" class="btn btn-back mt-3">Kembali ke Beranda</a>
-    <a href="<?= base_url('auth/logout') ?>" class="btn btn-back mt-3">Logout</a>
+    <!-- <a href="<?= base_url('auth/logout') ?>" class="btn btn-back mt-3">Logout</a> -->
   </div>
 </body>
 </html>
