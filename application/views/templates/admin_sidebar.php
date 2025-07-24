@@ -72,31 +72,6 @@
 
 
           
-         
-         
-          <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-search"></i>
-              <p>
-                Jenis Surat
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="../search/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Surat Aktif Kuliah</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="../search/enhanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Cuti Kuliah</p>
-                </a>
-              </li>
-            </ul>
-          </li>
           
            <li class="nav-item">
             <a href="<?php echo base_url('auth/logout')?>" class="nav-link">

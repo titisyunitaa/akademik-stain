@@ -31,9 +31,86 @@
     <p class="lead text-muted mb-4 text-center">
         Pilih layanan yang Anda butuhkan untuk mengakses informasi akademik dengan mudah dan cepat
     </p>
-    <div class="d-grid gap-4 mx-auto" style="max-width: 900px;">
+    <div class="row g-4">
+       <div class="col-md-4">
+        <a href="<?php echo base_url('layanan_surat/suratAktifKuliah')?>" class="layanan-link text-decoration-none text-dark">
+          <div class="layanan-card text-center p-4 shadow-sm h-100">
+            <div class="layanan-icon mb-3">
+              <i class="bi bi-person-check-fill fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-semibold">Surat Aktif Kuliah</h5>
+            <p class="text-muted">Untuk keperluan beasiswa, tunjangan, atau verifikasi status kemahasiswaan.</p>
+          </div>
+        </a>
+      </div>
+      <!-- Layanan 2 -->
+      <div class="col-md-4">
+        <a href="#" class="layanan-link text-decoration-none text-dark">
+          <div class="layanan-card text-center p-4 shadow-sm h-100">
+            <div class="layanan-icon mb-3">
+              <i class="bi bi-pause-circle-fill fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-semibold">Cuti Kuliah</h5>
+            <p class="text-muted">Permohonan penangguhan studi sementara untuk satu atau lebih semester.</p>
+          </div>
+        </a>
+      </div>
 
-      <a href="<?php echo base_url('layanan_surat')?>" class="layanan-link text-decoration-none text-dark">
+      <!-- Layanan 3 -->
+      <div class="col-md-4">
+        <a href="#" class="layanan-link text-decoration-none text-dark">
+          <div class="layanan-card text-center p-4 shadow-sm h-100">
+            <div class="layanan-icon mb-3">
+              <i class="bi bi-people-fill fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-semibold">Penunjuk Dosen Pembimbing</h5>
+            <p class="text-muted">Pengajuan dosen untuk pembimbingan skripsi atau tugas akhir Anda.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Layanan 4 -->
+      <div class="col-md-4">
+        <a href="#" class="layanan-link text-decoration-none text-dark">
+          <div class="layanan-card text-center p-4 shadow-sm h-100">
+            <div class="layanan-icon mb-3">
+              <i class="bi bi-search fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-semibold"> Pra Penelitian Skripsi</h5>
+            <p class="text-muted">Surat pengantar untuk melakukan observasi awal atau studi pendahuluan.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Layanan 5 -->
+      <div class="col-md-4">
+        <a href="#" class="layanan-link text-decoration-none text-dark">
+          <div class="layanan-card text-center p-4 shadow-sm h-100">
+            <div class="layanan-icon mb-3">
+              <i class="bi bi-journal-check fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-semibold"> Izin Penelitian Skripsi</h5>
+            <p class="text-muted">Permohonan izin resmi untuk pengambilan data skripsi di lokasi penelitian.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Layanan 6 -->
+      <div class="col-md-4">
+        <a href="#" class="layanan-link text-decoration-none text-dark">
+          <div class="layanan-card text-center p-4 shadow-sm h-100">
+            <div class="layanan-icon mb-3">
+              <i class="bi bi-box-arrow-right fs-1 text-success"></i>
+            </div>
+            <h5 class="fw-semibold"> Permohonan Diri</h5>
+            <p class="text-muted">Pengajuan surat keterangan pengunduran diri sebagai mahasiswa.</p>
+          </div>
+        </a>
+      </div>
+
+    
+
+      <!-- <a href="<?php echo base_url('layanan_surat')?>" class="layanan-link text-decoration-none text-dark">
         <div class="layanan-card d-flex align-items-center p-4 h-100 shadow-sm rounded-4">
           <div class="layanan-icon me-4">
             <i class="bi bi-file-earmark-text fs-1 text-success"></i>
@@ -46,9 +123,9 @@
             <i class="bi bi-chevron-right fs-4 text-secondary"></i>
           </div>
         </div>
-      </a>
+      </a> -->
 
-      <a href="<?php echo base_url('tracking')?>" class="layanan-link text-decoration-none text-dark">
+      <!-- <a href="<?php echo base_url('tracking')?>" class="layanan-link text-decoration-none text-dark">
         <div class="layanan-card d-flex align-items-center p-4 h-100 shadow-sm rounded-4">
           <div class="layanan-icon me-4">
             <i class="bi bi-search fs-1 text-success"></i>
@@ -61,23 +138,25 @@
             <i class="bi bi-chevron-right fs-4 text-secondary"></i>
           </div>
         </div>
-      </a>
+      </a> -->
       
     </div>
   </div>
 </section>
 
+
+
 <!-- Section Berita Terbaru -->
-<section id="berita" class="py-5 berita-section">
+<!-- <section id="berita" class="py-5 berita-section">
   <div class="container">
     <h2 class="text-center mb-3 fw-bold text-success">Berita Terbaru</h2>
     <p class="lead text-muted mb-5 text-center">
       Ikuti informasi dan perkembangan terkini seputar layanan dan kegiatan akademik di STAIN Sultan Abdurrahman.
     </p>
     
-    <div class="row g-4">
+    <div class="row g-4"> -->
       <!-- Berita 1 -->
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="card h-100 border-0 shadow-sm berita-card">
           <img src="<?= base_url('assets/img/berita1.jpg') ?>" class="card-img-top" alt="Berita 1">
           <div class="card-body">
@@ -86,9 +165,9 @@
             <a href="#" class="btn btn-sm btn-outline-success mt-2">Baca Selengkapnya</a>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Berita 2 -->
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="card h-100 border-0 shadow-sm berita-card">
           <img src="<?= base_url('assets/img/berita2.jpg') ?>" class="card-img-top" alt="Berita 2">
           <div class="card-body">
@@ -97,9 +176,9 @@
             <a href="#" class="btn btn-sm btn-outline-success mt-2">Baca Selengkapnya</a>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Berita 3 -->
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <div class="card h-100 border-0 shadow-sm berita-card">
           <img src="<?= base_url('assets/img/berita3.jpg') ?>" class="card-img-top" alt="Berita 3">
           <div class="card-body">
@@ -111,10 +190,10 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Section Sistem Informasi -->
-<section id="sisteminformasi" class="py-5" style="background-color: #f8f9fa;">
+<!-- <section id="sisteminformasi" class="py-5" style="background-color: #f8f9fa;">
   <div class="container">
     <h2 class="fw-bold text-success text-center mb-4">Sistem Informasi</h2>
     <p class="text-center text-muted mb-5 lead" style="max-width: 650px; margin-left: auto; margin-right: auto;">
@@ -185,10 +264,10 @@
 
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Section FAQ -->
-<section id="faq" class="py-5">
+<!-- <section id="faq" class="py-5">
   <div class="container" style="max-width: 800px;">
     <h2 class="fw-bold text-success text-center mb-4">Pertanyaan yang Sering Diajukan</h2>
     <p class="text-center text-muted mb-5">Temukan jawaban dari pertanyaan umum terkait layanan akademik kami.</p>
@@ -235,16 +314,16 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- Section Tentang -->
-<section id="tentang" class="py-5 tentang-section">
+<!-- <section id="tentang" class="py-5 tentang-section">
   <div class="container">
-    <div class="row g-4 align-items-start">
+    <div class="row g-4 align-items-start"> -->
 
       <!-- Kiri: Deskripsi -->
-      <div class="col-md-7">
+      <!-- <div class="col-md-7">
         <h2 class="fw-bold text-success mb-3">Tentang Layanan Akademik</h2>
         <p class="text-muted lead">
           Layanan Akademik STAIN Sultan Abdurrahman berkomitmen memberikan pelayanan prima kepada mahasiswa dalam hal administrasi perkuliahan, registrasi, pengajuan surat, dan informasi akademik lainnya.
@@ -252,14 +331,14 @@
         <p class="text-muted">
           Dengan sistem digital yang terus dikembangkan, kami hadir untuk mempermudah mahasiswa dalam mengakses berbagai kebutuhan akademik secara cepat, transparan, dan efisien.
         </p>
-      </div>
+      </div> -->
 
       <!-- Kanan: Card per item -->
-      <div class="col-md-5">
-        <div class="d-flex flex-column gap-3">
+      <!-- <div class="col-md-5">
+        <div class="d-flex flex-column gap-3"> -->
 
           <!-- Telepon -->
-          <div class="card p-3 d-flex flex-row align-items-center contact-box">
+          <!-- <div class="card p-3 d-flex flex-row align-items-center contact-box">
             <div class="icon-circle bg-success text-white me-3">
               <i class="bi bi-telephone-fill"></i>
             </div>
@@ -267,10 +346,10 @@
               <small class="text-muted">Telepon</small><br>
               <strong>(0771) 123456</strong>
             </div>
-          </div>
+          </div> -->
 
           <!-- Email -->
-          <div class="card p-3 d-flex flex-row align-items-center contact-box">
+          <!-- <div class="card p-3 d-flex flex-row align-items-center contact-box">
             <div class="icon-circle bg-primary text-white me-3">
               <i class="bi bi-envelope-fill"></i>
             </div>
@@ -278,10 +357,10 @@
               <small class="text-muted">Email</small><br>
               <strong>akademik@stainkepri.ac.id</strong>
             </div>
-          </div>
+          </div> -->
 
           <!-- Alamat -->
-          <div class="card p-3 d-flex flex-row align-items-center contact-box">
+          <!-- <div class="card p-3 d-flex flex-row align-items-center contact-box">
             <div class="icon-circle bg-warning text-white me-3">
               <i class="bi bi-geo-alt-fill"></i>
             </div>
@@ -289,10 +368,10 @@
               <small class="text-muted">Alamat</small><br>
               <strong>Jl. Lintas Barat, Tanjungpinang</strong>
             </div>
-          </div>
+          </div> -->
 
           <!-- Jam Layanan -->
-          <div class="card p-3 d-flex flex-row align-items-center contact-box">
+          <!-- <div class="card p-3 d-flex flex-row align-items-center contact-box">
             <div class="icon-circle bg-danger text-white me-3">
               <i class="bi bi-clock-fill"></i>
             </div>
@@ -306,5 +385,5 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 

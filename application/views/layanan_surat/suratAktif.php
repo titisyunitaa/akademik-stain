@@ -7,11 +7,65 @@
             </p>
         </header>
 
-        <div class="row g-5">
-            <div class="col-lg-8">
-                
-                <div class="container py-5">
-                    <div class="form-container">
+    
+
+     
+       
+         
+  <!-- <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .info-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      border-left: 6px solid #0d6efd;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .form-section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .form-label {
+      font-weight: 600;
+      color: #0d6efd;
+    }
+  </style> -->
+
+
+  <div class="row g-4">
+    <!-- Informasi Samping -->
+    <div class="col-md-4">
+      <div class="custom-card">
+        <h5><strong>Informasi Usulan Surat Keterangan Aktif Kuliah</strong></h5>
+        <p>Bagi Mahasiswa Yang Akan Melakukan Usulan Surat Keterangan Kuliah Menyiapkan Data Dukung Bukti Regis Dan KRS Pada Periode Aktif</p>
+        <p>Setelah Melakukan Usulan Surat Keterangan Aktif Kuliah, Bisa Melihat Progress Usulan Pada Menu Progress Layanan</p>
+        <p>Jika Progress Layanan Usulan Surat Keterangan Kuliah Statusnya Sudah Diproses, Silahkan Mengunduh Pada Aplikasi atau Mengecek Email Aktif Untuk Mengunduh Surat Keterangan Aktif Kuliah</p>
+
+        <hr>
+
+        <p><strong>Progress Layanan:</strong><br>
+          Surat Keterangan Aktif Kuliah 2025<br>
+          <span class="text-success">Sudah Diproses: 1033</span><br>
+          <span class="text-danger">Belum Diproses: 11</span>
+        </p>
+
+        <hr>
+
+        <p><strong>Direktorat Poltekkes Kupang</strong><br>
+        Administrasi dan Akademik<br>
+        Jln. Piet A Tallo, Oebobo, Kupang</p>
+      </div>
+    </div>
+
+    <!-- Form Utama -->
+    <div class="col-md-8">
+      
+         <div class="form-container">
                         <h3 class="form-title mb-4">Form Pengajuan Surat Keterangan Aktif Kuliah</h3>
 
                         <?php if($this->session->flashdata('message')): ?>
@@ -111,90 +165,13 @@
                             </div>
                         </form>
                     </div>
-                </div>
+      </div>
+    
+  </div>
 
+</body>
+</html>
 
-
-
-                <!-- <h2 class="section-title">Layanan Tersedia</h2> -->
-                
-                <!-- <div class="service-card">
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <i class="bi bi-file-earmark-arrow-down fs-2" style="color: #4db6ac;"></i>
-                        <div>
-                            <h3 class="h5 fw-bold mb-1">Download Format Surat</h3>
-                            <p class="text-secondary small mb-0">Template surat dalam format Word/PDF</p>
-                        </div>
-                    </div>
-                    <p class="text-secondary">Unduh template surat aktif kuliah untuk keperluan mandiri atau referensi format.</p>
-                    <a href="#" class="btn-custom">
-                        <i class="bi bi-download me-2"></i> Download Template
-                    </a>
-                </div>
-
-                <div class="service-card">
-                    <div class="d-flex align-items-start gap-3 mb-3">
-                        <i class="bi bi-send fs-2" style="color:#4db6ac;"></i>
-                        <div>
-                            <div class="d-flex align-items-center gap-2">
-                                <h3 class="h5 fw-bold mb-0">Form Pengajuan Surat</h3>
-                                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis">Rekomendasi</span>
-                            </div>
-                            <p class="text-secondary small mb-0">Ajukan surat secara online dengan mudah</p>
-                        </div>
-                    </div>
-                    <p class="text-secondary">Isi formulir pengajuan online dan surat akan diproses secara otomatis oleh sistem.</p>
-                    <a href="#" class="btn-custom">
-                        <i class="bi bi-pencil-square me-2"></i> Isi Form Pengajuan
-                    </a>
-                </div> -->
-
-            </div>
-
-            <div class="col-lg-4">
-                <h2 class="section-title">Informasi Penting</h2>
-                
-                <div class="info-wrapper">
-                    <div class="mb-5">
-                        <h3 class="h5 fw-bold d-flex align-items-center gap-2 mb-3">
-                            <i class="bi bi-patch-check-fill" style="color:#4db6ac;"></i>
-                            Persyaratan Pengajuan
-                        </h3>
-                        <p class="text-secondary mb-3">Pastikan Anda memenuhi semua persyaratan berikut sebelum mengajukan surat.</p>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex gap-3"><i class="bi bi-check-circle-fill text-success"></i> Mahasiswa aktif terdaftar di semester berjalan</li>
-                            <li class="list-group-item d-flex gap-3"><i class="bi bi-check-circle-fill text-success"></i> Telah menyelesaikan registrasi ulang semester aktif</li>
-                            <li class="list-group-item d-flex gap-3"><i class="bi bi-x-circle-fill text-danger"></i> Tidak memiliki tunggakan pembayaran akademik</li>
-                            <li class="list-group-item d-flex gap-3"><i class="bi bi-check-circle-fill text-success"></i> Melampirkan KTM (Kartu Tanda Mahasiswa) yang masih berlaku</li>
-                            <li class="list-group-item d-flex gap-3"><i class="bi bi-check-circle-fill text-success"></i> Mengisi formulir pengajuan dengan lengkap dan benar</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <div class="custom-card">
-            <h2 class="card-title"><i class="bi bi-journal-text" style ="color:#4db6ac;"></i> Catatan Penting</h2>
-            <hr class="my-4">
-            <ul class="note-list">
-                <li><b>Simpan kode resi pengajuan untuk melacak status surat Anda.</b></li>
-                <li>Pastikan semua persyaratan sudah lengkap sebelum mengisi formulir pengajuan.</li>
-                <li>Proses verifikasi dan penerbitan surat membutuhkan waktu maksimal 2 hari kerja.</li>
-                <li>Surat yang sudah diterbitkan dapat diunduh melalui email atau sistem tracking.</li>
-                <li>Untuk pertanyaan lebih lanjut, hubungi bagian administrasi akademik kampus.</li>
-            </ul>
-        </div>
-
-        <div class="text-center mt-4">
-            <a href="<?php echo base_url('layanan_surat')?>" class="btn btn-outline-secondary">
-                <i class="bi bi-arrow-left me-1"></i> Kembali ke Layanan Surat
-            </a>
-        </div>
-         <div class="container content-container my-5">
-        
-    </div>
     </div>
 </body>
 </html>
