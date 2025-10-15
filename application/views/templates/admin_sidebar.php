@@ -75,7 +75,7 @@
           
            <li class="nav-item">
             <a href="<?php echo base_url('auth/logout')?>" class="nav-link">
-              <i class="nav-icon fas fa-file"></i>
+              <i class="fa-solid fa-right-from-bracket"></i>
               <p>Logout</p>
             </a>
           </li>

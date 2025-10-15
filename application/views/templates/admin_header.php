@@ -14,7 +14,8 @@
 
 <!-- Bootstrap 5 JS (butuh Popper juga) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+ <!-- summernote -->
+  <link rel="stylesheet" href="<?php echo base_url('assets/')?>plugins/summernote/summernote-bs4.min.css">
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->

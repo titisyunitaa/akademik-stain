@@ -25,11 +25,10 @@
             <div class="col-md-6 col-lg-2 mx-auto mt-3">
                 <h5 class="text-uppercase mb-4 fw-bold">Layanan Akademik</h5>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a href="#" class="text-white">Kalender Akademik</a></li>
-                    <li class="mb-2"><a href="#" class="text-white">Pendaftaran Mahasiswa</a></li>
-                    <li class="mb-2"><a href="#" class="text-white">Transkrip Nilai</a></li>
-                    <li class="mb-2"><a href="#" class="text-white">Jadwal Kuliah</a></li>
                     <li class="mb-2"><a href="#" class="text-white">Surat Aktif Kuliah</a></li>
+                    <li class="mb-2"><a href="#" class="text-white">Surat Permohonan Pra Penelitian Skripsi</a></li>
+                    <li class="mb-2"><a href="#" class="text-white">Surat Permohonan Izin Penelitian Skripsi Nilai</a></li>
+                    <li class="mb-2"><a href="#" class="text-white">Download Dokumen</a></li>
                 </ul>
             </div>
 
@@ -38,16 +37,14 @@
                 <ul class="list-unstyled">
                     <li class="mb-3 d-flex align-items-start">
                         <i class="bi bi-geo-alt-fill me-3 mt-1"></i>
-                        <span>Jl. Raya Dompak, Tanjungpinang<br>Kepulauan Riau, Indonesia</span>
+                        <span>Jl. Lintas Barat KM. 19 Ceruk Ijuk
+<br>Kelurahan Toapaya Asri - Kabupaten Bintan, Provinsi Kepulauan Riau 29151</span>
                     </li>
                     <li class="mb-3 d-flex align-items-start">
                         <i class="bi bi-telephone-fill me-3 mt-1"></i>
-                        <span>+62 778 123456</span>
+                        <span>+6281217602226</span>
                     </li>
-                    <li class="mb-3 d-flex align-items-start">
-                        <i class="bi bi-envelope-fill me-3 mt-1"></i>
-                        <span>akademik@stainkepri.ac.id</span>
-                    </li>
+                   
                 </ul>
             </div>
 
@@ -59,7 +56,7 @@
 </footer>
 
 
-<a href="https://wa.me/628123456789" 
+<a href="https://wa.me/6281217602226" 
    class="wa-float" 
    target="_blank" 
    aria-label="Chat WhatsApp">
@@ -70,6 +67,7 @@
 <script src = "script.js"></script>
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 </html>

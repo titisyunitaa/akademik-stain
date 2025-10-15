@@ -1,167 +1,220 @@
-<!-- <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Survey Kepuasan Layanan</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --primary-color: #4db6ac;
-            --light-bg: #f7f9fc;
-            --card-bg: #ffffff;
-            --text-dark: #2c3e50;
-            --text-secondary: #7f8c8d;
-            --border-color: #e9ecef;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-        }
-
-        </style>
-</head>
-<body> -->
-    <header class="survey-header">
-        <div class="container">
-            <h1 class="display-6">Survey Kepuasan Layanan</h1>
-            <p>Bantu kami meningkatkan kualitas layanan dengan memberikan masukan Anda</p>
-            <div class="progress-container">
-                <div class="d-flex justify-content-between small mb-1">
-                    <span>Progress</span>
-                    <span id="progress-text">0%</span>
-                </div>
-                <div class="progress">
-                    <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-            </div>
+<?php
+if (!function_exists('badge')) {
+  function badge($nilai) {
+    if ($nilai == 1 || $nilai == 2) {
+      $color = 'danger'; // merah
+    } elseif ($nilai == 3) {
+      $color = 'primary'; // biru
+    } else {
+      $color = 'success'; // hijau
+    }
+    return '<span class="badge bg-' . $color . '">' . $nilai . '</span>';
+  }
+}
+?>
+<!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-5">
+            <h1><?php echo $title;?></h1>
+            <?php echo form_error('menu','<div class="alert alert-danger" role="alert">','</div>'); ?>
+            <?php echo $this->session->flashdata('message');?>
+          </div>
         </div>
-    </header>
+      </div><!-- /.container-fluid -->
+    </section>
 
-    <main class="container survey-container">
-        <div class="card survey-card">
-            <div class="card-header survey-card-header d-flex justify-content-between align-items-center">
-                <span id="question-counter"><i class="bi bi-chat-left-text me-2"></i>Pertanyaan 1 dari X</span>
-                <span id="step-counter" class="badge bg-light text-dark-emphasis border">Step 1/X</span>
+     
+
+     <section class="content">
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+         
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">DataTable with default features</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIM</th>
+                        <th>Nilai Kualitas</th>
+                        <th>Nilai Kecepatan</th>
+                        <th>Nilai Kemudahan</th>
+                        <th>Nilai Kejelasan</th>
+                        <th>Nilai Keandalan</th>
+                        <th>Nilai Kepuasan</th>
+                        <th>Kritik dan Saran</th>
+                        <th>Nomor Surat : </th>
+                        <th>Tanggal submit : </th>
+                        <th>Prodi : </th>
+                        <th>Jenis Surat : </th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php $i=1;?>
+                    <?php foreach($survey_kepuasan as $sk) : ?>
+          <tr>
+            <td><?php echo $i;?></td>
+            <td><?php echo $sk['nim_mhs']?></td>
+
+            <td><?php echo badge($sk['nilai_kualitas']);?></td>
+            <td><?php echo badge($sk['nilai_kecepatan']);?></td>
+            <td><?php echo badge($sk['nilai_kemudahan']);?></td>
+            <td><?php echo badge($sk['nilai_kejelasan']);?></td>
+            <td><?php echo badge($sk['nilai_keandalan']);?></td>
+            <td><?php echo badge($sk['nilai_kepuasan']);?></td>
+            <td><?php echo $sk['saran']?></td>
+            <td><?php echo $sk['nomor_surat']?></td>
+            <td><?php echo $sk['created_at']?></td>
+            <td><?php echo $sk['nama_prodi']?></td>
+            <td><?php echo $sk['jenis_surat']?></td>
+          </tr> 
+          <?php $i++;?>
+                    <?php endforeach;?>
+                   
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>No</th>
+                        <th>NIM</th>
+                        <th>Nilai Kualitas</th>
+                        <th>Nilai Kecepatan</th>
+                        <th>Nilai Kemudahan</th>
+                        <th>Nilai Kejelasan</th>
+                        <th>Nilai Keandalan</th>
+                        <th>Nilai Kepuasan</th>
+                        <th>Kritik dan Saran</th>
+                        <th>Nomor Surat</th>
+                        <th>Tanggal submit</th>
+                        <th>Prodi</th>
+                        <th>Jenis Surat</th>
+                    </tr>
+                </tfoot>
+                </table>
+              </div>
+              <!-- /.card-body -->
             </div>
-            <div class="card-body p-4 p-md-5">
-                <p id="question-text" class="survey-question mb-4">Pertanyaan akan dimuat di sini...</p>
-                <form id="surveyForm">
-                    <div id="options-container" class="survey-options">
-                        </div>
-                </form>
-            </div>
-            <div class="card-footer survey-card-footer p-3 d-flex justify-content-between">
-                <button type="button" id="prev-btn" class="btn btn-lg btn-prev">Sebelumnya</button>
-                <button type="button" id="next-btn" class="btn btn-lg btn-primary">Selanjutnya</button>
-            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
         </div>
-    </main>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+     
 
-    <script>
-        // --- DATA SURVEY ---
-        const surveyData = [
-            {
-                question: "Bagaimana tingkat kepuasan Anda secara keseluruhan dengan layanan kami?",
-                options: ["Sangat Puas", "Puas", "Cukup", "Kurang Puas", "Tidak Puas"]
-            },
-            {
-                question: "Seberapa mudah Anda mendapatkan informasi yang dibutuhkan?",
-                options: ["Sangat Mudah", "Mudah", "Cukup Mudah", "Sulit", "Sangat Sulit"]
-            },
-            {
-                question: "Bagaimana Anda menilai keramahan staf kami?",
-                options: ["Sangat Ramah", "Ramah", "Cukup Ramah", "Kurang Ramah", "Tidak Ramah"]
-            },
-            {
-                question: "Apakah Anda akan merekomendasikan layanan kami kepada orang lain?",
-                options: ["Pasti", "Mungkin", "Ragu-ragu", "Tidak Akan"]
-            }
-        ];
+      <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+        
+           
 
-        // --- ELEMEN DOM ---
-        const questionTextEl = document.getElementById('question-text');
-        const optionsContainerEl = document.getElementById('options-container');
-        const questionCounterEl = document.getElementById('question-counter');
-        const stepCounterEl = document.getElementById('step-counter');
-        const progressBarEl = document.getElementById('progress-bar');
-        const progressTextEl = document.getElementById('progress-text');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
+            <!-- PIE CHART -->
+            <div class="card card-primary">
+                  <div class="card-header"><h3 class="card-title">Kualitas</h3></div>
+                  <div class="card-body"><canvas id="pieKualitas" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas></div>
+                </div>
 
-        // --- LOGIKA SURVEY ---
-        let currentQuestionIndex = 0;
-        const totalQuestions = surveyData.length;
+                <div class="card card-primary">
+                  <div class="card-header"><h3 class="card-title">Kemudahan</h3></div>
+                  <div class="card-body"><canvas id="pieKemudahan" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas></div>
+                </div>
 
-        function renderQuestion(index) {
-            const currentQuestion = surveyData[index];
-            
-            // Render teks pertanyaan
-            questionTextEl.textContent = currentQuestion.question;
-            
-            // Render pilihan jawaban
-            optionsContainerEl.innerHTML = ''; // Kosongkan pilihan lama
-            currentQuestion.options.forEach((option, i) => {
-                const optionId = `option${i}`;
-                const optionEl = document.createElement('label');
-                optionEl.className = 'radio-option';
-                optionEl.innerHTML = `
-                    <input type="radio" name="answer" id="${optionId}" value="${i}">
-                    <span class="radio-custom"></span>
-                    <span class="radio-number">${i + 1}</span>
-                    <span class="radio-label">${option}</span>
-                `;
-                optionsContainerEl.appendChild(optionEl);
-            });
+                <div class="card card-primary">
+                  <div class="card-header"><h3 class="card-title">Keandalan</h3></div>
+                  <div class="card-body"><canvas id="pieKeandalan" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas></div>
+                </div>
+            <!-- /.card -->
 
-            // Update progress bar dan counter
-            const progressPercentage = ((index) / totalQuestions) * 100;
-            progressBarEl.style.width = `${progressPercentage}%`;
-            progressTextEl.textContent = `${Math.round(progressPercentage)}%`;
-            questionCounterEl.innerHTML = `<i class="bi bi-chat-left-text me-2"></i>Pertanyaan ${index + 1} dari ${totalQuestions}`;
-            stepCounterEl.textContent = `Step ${index + 1}/${totalQuestions}`;
+          </div>
+          <!-- /.col (LEFT) -->
+          <div class="col-md-6">
+                <div class="card card-primary">
+                  <div class="card-header"><h3 class="card-title">Kecepatan</h3></div>
+                  <div class="card-body"><canvas id="pieKecepatan" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas></div>
+                </div>
 
-            // Atur visibilitas tombol
-            prevBtn.disabled = index === 0;
-            if (index === totalQuestions - 1) {
-                nextBtn.textContent = 'Selesai';
-            } else {
-                nextBtn.textContent = 'Selanjutnya';
-            }
-        }
+                <div class="card card-primary">
+                  <div class="card-header"><h3 class="card-title">Kejelasan</h3></div>
+                  <div class="card-body"><canvas id="pieKejelasan" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas></div>
+                </div>
 
-        // --- EVENT LISTENERS ---
-        nextBtn.addEventListener('click', () => {
-            if (currentQuestionIndex < totalQuestions - 1) {
-                currentQuestionIndex++;
-                renderQuestion(currentQuestionIndex);
-            } else {
-                // Aksi saat survei selesai
-                alert('Terima kasih telah mengisi survey!');
-                // Di sini Anda bisa menambahkan logika untuk mengirim data atau mengarahkan ke halaman lain
-            }
-        });
+                 <div class="card card-primary">
+                  <div class="card-header"><h3 class="card-title">Kepuasan</h3></div>
+                  <div class="card-body"><canvas id="pieKepuasan" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas></div>
+                </div>
+         
 
-        prevBtn.addEventListener('click', () => {
-            if (currentQuestionIndex > 0) {
-                currentQuestionIndex--;
-                renderQuestion(currentQuestionIndex);
-            }
-        });
+     
 
-        // --- INISIALISASI ---
-        // Tampilkan pertanyaan pertama saat halaman dimuat
-        renderQuestion(currentQuestionIndex);
-    </script>
-</body>
-</html>
+          </div>
+          <!-- /.col (RIGHT) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+
+
+
+   <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-5">
+          
+
+     
+
+            <!-- PIE CHARTS PER CARD -->
+            <div class="row">
+              <div class="col-md-6">
+                
+              </div>
+             
+                
+              
+             
+              
+              
+              
+                
+              
+              
+                
+             
+             
+               
+              
+            </div>
+
+          </div>
+       
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    
+  </div>
+  <!-- /.content-wrapper -->
+
+
+
+
+
+
+

@@ -34,7 +34,6 @@
                     <th>No</th>
                     <th>Jenis Surat</th>
                     <th>Deskripsi Surat</th>
-                    <th>Format Surat</th>
                     <th>Action</th>
                   </tr>
                   </thead>
@@ -45,16 +44,6 @@
                     <td><?php echo $i;?></td>
                     <td><?php echo $js['jenis_surat']?></td>
                     <td><?php echo $js['deskripsi']?></td>
-                    <td>
-                        <?php if(!empty($js['format_surat'])): ?>
-                        <a href="<?= base_url('uploads/format_surat/' . $js['format_surat']); ?>" target="_blank" class="btn btn-sm btn-outline-success" rel="noopener noreferrer">
-                            <i class="fa fa-file-word"></i> Download Dokumen
-                        </a>
-                        <div class="small text-muted"><?= $js['format_surat'] ?></div>
-                        <?php else: ?>
-                        <span class="text-danger">Belum ada dokumen</span>
-                        <?php endif; ?>
-                    </td>
                     <td>
                         <div class="btn-group btn-group-sm">
 
@@ -77,7 +66,6 @@
                     <th>No</th>
                     <th>Jenis Surat</th>
                     <th>Deskripsi Surat</th>
-                    <th>Format Surat</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>
@@ -116,15 +104,7 @@
              <div class="mb-3">
                 <label for="" class="form-label">Deskripsi Surat</label>
                 <input type="text" class="form-control" name="deskripsi" id="deskripsi" placeholder="Masukkan Deskripsi Surat">
-            </div>
-
-            <div class="mb-3">
-                <label for="format_surat" class="form-label">Upload Format Surat</label>
-                <input type="file" class="form-control" name="format_surat" id="format_surat" accept=".doc,.docx">
-                <small class="text-muted">Hanya file .doc, .docx</small>
-                
-          </div>
-            
+            </div> 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -153,13 +133,6 @@
             <div class="mb-3">
                 <label class="form-label">Deskripsi Surat</label>
                 <input type="text" class="form-control" name="deskripsi" value="<?php echo $js['deskripsi']?>" required>
-            </div>
-            <div class="mb-3">
-                <label for="format_surat<?php echo $js['id']; ?>" class="form-label">Upload Format Surat (kosongkan jika tidak ganti)</label>
-                <input type="file" class="form-control" name="format_surat" id="format_surat<?php echo $js['id']; ?>" accept=".doc,.docx">
-                <?php if(!empty($js['format_surat'])): ?>
-                <div class="small text-muted mt-1">File saat ini: <a href="<?= base_url('uploads/format_surat/' . $js['format_surat']); ?>" target="_blank"><?php echo $js['format_surat']?></a></div>
-                <?php endif; ?>
             </div>
         </div>
         <div class="modal-footer">

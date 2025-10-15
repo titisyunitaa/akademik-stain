@@ -47,12 +47,12 @@ class Auth extends CI_Controller {
 					//menyimpan data ke dalam session
 					$this->session->set_userdata($data);
 					if($user['role_id'] == 1){
-						redirect('superadmin');
+						redirect('superadmin/role');
 					}elseif($user['role_id'] == 2){
-						redirect('admin');
-					}else{
-                        redirect('user');
-                    }
+						redirect('user/index');
+					}elseif($user['role_id'] == 5){
+						redirect('laporan/laporan_surat_mahasiswa');
+					}
 
 					var_dump($this->session->userdata()); die;
 

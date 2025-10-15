@@ -22,7 +22,7 @@
   <div class="container">
     <a class="navbar-brand d-flex align-items-center gap-2 text-success fw-bold" href="">
         <img src="<?php echo base_url('assets/img/logo_stain.png')?>" alt="" class="logo-stain";> 
-        <span>Akademik STAIN KEPRI</span>
+        <span>SIPENA STAIN KEPRI</span>
     </a>
 
     <!-- Burger Menu -->
@@ -36,7 +36,19 @@
           <a class="nav-link active" href="<?php echo base_url('home')?>">Beranda</a>
         </li>
 
-        <li class="nav-item dropdown">
+         <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('layanan_surat')?>">Ajukan Surat</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('tracking')?>">Lacak Surat</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="<?php echo base_url('unduhan')?>">Download Dokumen</a>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLayanan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Layanan Online
             </a>
@@ -49,18 +61,18 @@
                 <li><a class="dropdown-item" href="<?php echo base_url('layanan_surat')?>">Pengajuan Izin Penelitian Skripsi</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('layanan_surat')?>">Pengajuan Permohonan Diri</a></li>
               </ul>
-        </li>
+        </li> -->
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLayanan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Lacak Surat
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownLayanan">
                 <li><a class="dropdown-item" href="<?php echo base_url('tracking')?>">Lacak Surat Online</a></li>
             </ul>
-        </li>
+        </li> -->
 
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLayanan" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Unduhan
             </a>
@@ -69,22 +81,22 @@
                 <li><a class="dropdown-item" href="">SK Beasiswa</a></li>
                 <li><a class="dropdown-item" href="<?php echo base_url('unduhan')?>">Dokumen</a></li>
             </ul>
-        </li>
+        </li> -->
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="<?php echo base_url('berita')?>">Berita</a>
-        </li>
+        </li> -->
 
         <li class="nav-item">
-          <a class="nav-link" href="<?php echo base_url('berita')?>">MoU</a>
+          <a class="nav-link" href="<?php echo base_url('master/mou')?>">MoU</a>
         </li>
 
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link" href="<?php echo base_url('survey')?>">Survey</a>
         </li>
-      </ul>
+      </ul> -->
 
-       <a href="<?php echo base_url('auth')?>" class="btn btn-gradient ms-lg-3 mt-2 mt-lg-0">Login</a>
+       <!-- <a href="<?php echo base_url('auth')?>" class="btn btn-gradient ms-lg-3 mt-2 mt-lg-0">Login</a> -->
     </div>
   </div>
 </nav>

@@ -50,8 +50,8 @@
                             <a href="#" data-bs-toggle="modal" data-bs-target="#editRoleModal<?php echo $r['id']; ?>" class="btn btn-warning">
                             <i class="fa-solid fa-pen-to-square"></i></a>
 
-                            <a href="<?php echo base_url('menu/delete')?>/<?php echo $r['id'];?>" class="btn btn-danger" 
-                            onclick="return confirm('Yakin ingin menghapus menu ini?')">
+                            <a href="<?php echo base_url('superadmin/deleterole')?>/<?php echo $r['id'];?>" class="btn btn-danger" 
+                            onclick="return confirm('Yakin ingin menghapus Role ini?')">
                             <i class="fas fa-trash"></i></a>
                       </div>
                     </td>
