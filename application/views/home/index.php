@@ -12,10 +12,10 @@
         Layanan akademik online yang memudahkan mahasiswa untuk mengajukan berbagai jenis surat akademik dengan cepat dan efisien
         </p>
         <div class="d-flex flex-wrap gap-3">
-          <button id="showWelcomeSipena" class="btn btn-gradient ms-lg-3 mt-2 mt-lg-0" type="button">Ajukan Surat</button>
-          <a href="<?php echo base_url('tracking')?>" class="btn btn-gradient ms-lg-3 mt-2 mt-lg-0">Lacak Surat</a>
+            <button id="showWelcomeSipena" class="btn btn-gradient ms-lg-3 mt-2 mt-lg-0" type="button">Ajukan Surat</button>
 
-<?php $this->load->view('home/welcome_sipena_modal'); ?>
+            <a href="<?php echo base_url('tracking')?>" class="btn btn-gradient ms-lg-3 mt-2 mt-lg-0">Lacak Surat</a>
+            <?php $this->load->view('home/welcome_sipena_modal'); ?>
         </div>
       </div>
 
@@ -51,7 +51,7 @@
       <div class="col-6 col-md-3 text-center">
         <div style="background:#2346b0;color:#fff;width:110px;height:110px;display:flex;align-items:center;justify-content:center;border-radius:50%;margin:0 auto;font-size:2.2rem;font-weight:700;">4</div>
         <h5 class="fw-bold mt-3">Lacak & Download</h5>
-        <div class="text-muted">Lacak status dengan kode resi, isi survey, dan download surat Anda</div>
+        <div class="text-muted">Lacak status dengan kode resi, isi survey, dan ambil surat Anda di Pelayanan Akademik</div>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -90,36 +90,11 @@
   </div>
 </section> -->
 
-<!-- Section Layanan -->
-<section id="layanan" class="py-5 layanan-section">
-  <div class="container">
-    <h2 class="text-center mb-3 fw-bold text-success">Layanan Surat Online</h2>
-    <p class="lead text-muted mb-4 text-center">
-        Pilih layanan yang Anda butuhkan untuk mengakses informasi akademik dengan mudah dan cepat
-    </p>
 
-     <div class="row g-4">
-     <!-- //  Layanan 1 -->
-      <?php foreach($jenissurat as $js): ?>
-        <div class="col-md-4">
-          <a href="<?php echo base_url('layanan_surat/detail/'.$js['id']) ?>" class="layanan-link text-decoration-none text-dark">
-            <div class="layanan-card text-center p-4 shadow-sm h-100">
-              <div class="layanan-icon mb-3">
-                <i class="<?php echo $js['icon'] ?>"></i>
-              </div>
-              <h5 class="fw-semibold"><?php echo $js['jenis_surat'] ?></h5>
-              <p class="text-muted"><?php echo $js['deskripsi'] ?></p>
-            </div>
-          </a>
-        </div>
-      <?php endforeach; ?> 
-    </div>
-  </div>
-</section>
 
 
 <!-- Section Cara Menggunakan Layanan -->
-<section id="cara-kerja" class="py-5">
+<section id="cara-kerja" class="py-5" style="background: #ffffff;">
   <div class="container cara-kerja-container">
     <h2 class="text-center mb-3 fw-bold text-success">Cara Menggunakan Layanan</h2>
     
@@ -145,8 +120,8 @@
       </div>
       <div class="col-6 col-md-3 text-center">
         <div class="cara-kerja-step-circle">4</div>
-        <h5 class="fw-bold mt-3">Lacak & Download</h5>
-        <div class="text-muted">Lacak status dengan kode resi, isi survey, dan download surat Anda</div>
+        <h5 class="fw-bold mt-3">Lacak & Ambil Surat</h5>
+        <div class="text-muted">Lacak status dengan kode resi, isi survey, dan Ambil surat Anda di Ruang Akademik</div>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -164,7 +139,7 @@
           <div class="d-none d-md-block cara-kerja-progress-line"></div>
           <div class="text-center flex-fill mx-2 my-2">
             <div class="cara-kerja-progress-circle"><i class="bi bi-star"></i></div>
-            <div class="fw-semibold mt-2">Survey</div>
+            <div class="fw-semibold mt-2">Isi Survey</div>
           </div>
           <div class="d-none d-md-block cara-kerja-progress-line"></div>
           <div class="text-center flex-fill mx-2 my-2">
@@ -177,30 +152,29 @@
   </div>
 </section>
 
-<!-- Section Tracking Surat -->
-<section id="tracking-home" class="py-5" style="background:#fff;">
+
+<!-- Section Video Tutorial -->
+<section id="tutorial" class="py-5" style="background:#f9f9f9;">
   <div class="container">
-    <h2 class="text-center mb-4 fw-bold text-success">Tracking Surat</h2>
-    <p class="lead text-muted mb-4 text-center">Masukkan nomor resi pengajuan surat Anda untuk melihat status dan riwayat surat.</p>
+    <h2 class="fw-bold text-success text-center mb-4">Video Tutorial</h2>
+    <p class="text-center text-muted mb-5">Simak panduan singkat cara menggunakan layanan SIPENA.</p>
+
     <div class="row justify-content-center">
-      <div class="col-lg-7">
-        <form id="trackingFormHome" class="mb-3">
-          <div class="input-group input-group-lg">
-            <input type="text" class="form-control" id="nomorResiHome" placeholder="Contoh: AK-1753576175" required>
-            <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Lacak</button>
-          </div>
-        </form>
-        <div id="statusResultHome" class="status-card d-none mt-3">
-          <div class="status-header">
-            <h4 id="statusTitleHome"></h4>
-            <p id="statusSubtitleHome"></p>
-          </div>
-          <ul class="timeline" style="list-style:none; padding-left:0;"></ul>
+      <div class="col-lg-8">
+        <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden fade-in-video">
+          <iframe 
+            src="https://www.youtube.com/embed/rrVNH2_TF0A" 
+            title="Video Tutorial SIPENA" 
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 
 
@@ -241,13 +215,12 @@
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Apakah saya perlu datang ke kampus untuk mengambil surat?
+            Jika status surat di menu Lacak Surat sudah "Selesai", apa yang harus saya lakukan?
           </button>
         </h2>
         <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
           <div class="accordion-body">
-            Beberapa surat tersedia dalam bentuk digital (PDF) yang bisa langsung diunduh melalui SIPENA.
-            Namun, untuk surat yang membutuhkan tanda tangan basah, mahasiswa perlu mengambil langsung di bagian akademik kampus.
+                 Jika status surat sudah <strong>"Selesai"</strong> pada menu Lacak Surat, mahasiswa dapat mengambil surat tersebut langsung di bagian akademik kampus 
         </div>
         </div>
       </div>
@@ -282,27 +255,8 @@ Kamu bisa memperbaiki lalu mengajukan kembali.
     </div>
   </div>
 </section>
-<!-- Section Video Tutorial -->
-<section id="tutorial" class="py-5" style="background:#f9f9f9;">
-  <div class="container">
-    <h2 class="fw-bold text-success text-center mb-4">Video Tutorial</h2>
-    <p class="text-center text-muted mb-5">Simak panduan singkat cara menggunakan layanan SIPENA.</p>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="ratio ratio-16x9 shadow rounded-4 overflow-hidden fade-in-video">
-          <iframe 
-            src="https://www.youtube.com/embed/rrVNH2_TF0A" 
-            title="Video Tutorial SIPENA" 
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-          </iframe>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <script>
 // Deteksi saat scroll
@@ -312,76 +266,6 @@ document.addEventListener("scroll", function() {
   if (rect.top < window.innerHeight - 100) {
     video.classList.add("visible");
   }
-});
-</script>
-
-
-<script>
-document.getElementById('trackingFormHome').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const nomorResiInput = document.getElementById('nomorResiHome');
-  const statusResultDiv = document.getElementById('statusResultHome');
-  const statusTitleH4 = document.getElementById('statusTitleHome');
-  const statusSubtitleP = document.getElementById('statusSubtitleHome');
-  const nomorResi = nomorResiInput.value.trim();
-  statusTitleH4.textContent = '';
-  statusSubtitleP.textContent = '';
-  document.querySelector('#statusResultHome .timeline').innerHTML = '';
-  let notFoundMsg = document.getElementById('notFoundMsgHome');
-  if (notFoundMsg) notFoundMsg.remove();
-  let downloadBtn = document.getElementById('downloadSuratBtnHome');
-  if (downloadBtn) downloadBtn.remove();
-  if (!nomorResi) {
-    alert('Silakan masukkan Nomor Resi terlebih dahulu.');
-    return;
-  }
-  fetch('<?= base_url('tracking/tracking_surat/') ?>' + encodeURIComponent(nomorResi))
-    .then(res => res.json())
-    .then(data => {
-      if (data.status === 'not_found') {
-        let msg = document.createElement('div');
-        msg.id = 'notFoundMsgHome';
-        msg.className = 'alert alert-danger mt-3 text-center';
-        msg.innerHTML = '<i class="bi bi-exclamation-circle"></i> Nomor resi tidak ditemukan. Pastikan Anda memasukkan nomor resi dengan benar.';
-        statusResultDiv.appendChild(msg);
-        statusResultDiv.classList.remove('d-none');
-        return;
-      }
-      statusTitleH4.textContent = `Status: ${data.surat.status}`;
-      statusSubtitleP.textContent = `${data.surat.nama_surat} - ${data.surat.nama_mahasiswa}`;
-      let timelineHtml = '';
-      if (data.timeline && data.timeline.length > 0) {
-        data.timeline.forEach(function(item) {
-          timelineHtml += `<li class=\"timeline-item\">
-            <div class=\"timeline-icon\"><i class=\"bi bi-check-lg\"></i></div>
-            <div class=\"timeline-content\">
-              <h4 class=\"title\">${item.status}</h4>
-              <div class=\"date\">${item.timestamp}</div>
-              <p class=\"description\">${item.keterangan ? item.keterangan : ''}</p>
-            </div>
-          </li>`;
-        });
-      } else {
-        timelineHtml = '<li class=\"timeline-item\"><div class=\"timeline-content\">Belum ada riwayat status.</div></li>';
-      }
-      document.querySelector('#statusResultHome .timeline').innerHTML = timelineHtml;
-      if (data.surat.status === 'selesai' && data.surat.download_url) {
-        let btn = document.createElement('a');
-        btn.href = data.surat.download_url;
-        btn.target = '_blank';
-        btn.className = 'btn btn-success mt-3';
-        btn.id = 'downloadSuratBtnHome';
-        btn.innerHTML = '<i class=\"bi bi-download\"></i> Download Surat Final';
-        statusResultDiv.appendChild(btn);
-      }
-      statusResultDiv.classList.remove('d-none');
-      statusResultDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    })
-    .catch(() => {
-      statusTitleH4.textContent = 'Terjadi kesalahan. Coba lagi.';
-      statusSubtitleP.textContent = '';
-      statusResultDiv.classList.remove('d-none');
-    });
 });
 </script>
 
@@ -455,51 +339,7 @@ document.getElementById('trackingFormHome').addEventListener('submit', function(
   </div>
 </section> -->
 
-<!-- Section Berita Terbaru -->
-<!-- <section id="berita" class="py-5 berita-section">
-  <div class="container">
-    <h2 class="text-center mb-3 fw-bold text-success">Berita Terbaru</h2>
-    <p class="lead text-muted mb-5 text-center">
-      Ikuti informasi dan perkembangan terkini seputar layanan dan kegiatan akademik di STAIN Sultan Abdurrahman.
-    </p>
-    
-    <div class="row g-4"> -->
-      <!-- Berita 1 -->
-      <!-- <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm berita-card">
-          <img src="<?= base_url('assets/img/berita1.jpg') ?>" class="card-img-top" alt="Berita 1">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">Pendaftaran Mahasiswa Baru Dibuka</h5>
-            <p class="card-text text-muted">STAIN Kepri resmi membuka pendaftaran untuk tahun ajaran baru. Simak persyaratannya di sini.</p>
-            <a href="#" class="btn btn-sm btn-outline-success mt-2">Baca Selengkapnya</a>
-          </div>
-        </div>
-      </div> -->
-      <!-- Berita 2 -->
-      <!-- <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm berita-card">
-          <img src="<?= base_url('assets/img/berita2.jpg') ?>" class="card-img-top" alt="Berita 2">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">Wisuda ke-10 Berlangsung Meriah</h5>
-            <p class="card-text text-muted">Lebih dari 300 mahasiswa mengikuti wisuda tahun ini yang dilaksanakan secara khidmat dan meriah.</p>
-            <a href="#" class="btn btn-sm btn-outline-success mt-2">Baca Selengkapnya</a>
-          </div>
-        </div>
-      </div> -->
-      <!-- Berita 3 -->
-      <!-- <div class="col-md-4">
-        <div class="card h-100 border-0 shadow-sm berita-card">
-          <img src="<?= base_url('assets/img/berita3.jpg') ?>" class="card-img-top" alt="Berita 3">
-          <div class="card-body">
-            <h5 class="card-title fw-semibold">STAIN Adakan Seminar Nasional</h5>
-            <p class="card-text text-muted">Dosen dan mahasiswa antusias ikuti seminar nasional bertema teknologi dalam pendidikan Islam.</p>
-            <a href="#" class="btn btn-sm btn-outline-success mt-2">Baca Selengkapnya</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
+
 
 <!-- Section Sistem Informasi -->
 <!-- <section id="sisteminformasi" class="py-5" style="background-color: #f8f9fa;">

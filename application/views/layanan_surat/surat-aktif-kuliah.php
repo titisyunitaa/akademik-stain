@@ -1,257 +1,4 @@
 
-    <style>
-    .sak-modal-bg {
-        background: rgba(0,0,0,0.4);
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        z-index: 1050;
-        display: none;
-        align-items: center;
-        justify-content: center;
-    }
-    .sak-modal-bg.show { display: flex; }
-    .sak-modal {
-        background: #fff;
-        border-radius: 18px;
-        max-width: 600px;
-        width: 95vw;
-        box-shadow: 0 8px 32px rgba(44,62,80,0.18);
-        overflow: hidden;
-        animation: fadeInUp .3s;
-    }
-    @keyframes fadeInUp {
-        from { transform: translateY(40px); opacity: 0; }
-        to { transform: translateY(0); opacity: 1; }
-    }
-    .sak-modal-header {
-        background: linear-gradient(135deg, #ff9800 80%, #ffb74d 100%);
-        color: #fff;
-        padding: 32px 24px 24px 24px;
-        text-align: center;
-        position: relative;
-    }
-    .sak-modal-header .sak-icon {
-        background: #fff;
-        color: #ff9800;
-        border-radius: 50%;
-        width: 56px;
-        height: 56px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2.2rem;
-        margin: 0 auto 18px auto;
-    }
-    .sak-modal-header .close {
-        position: absolute;
-        top: 18px;
-        right: 18px;
-        background: none;
-        border: none;
-        color: #fff;
-        font-size: 1.7rem;
-        cursor: pointer;
-        opacity: 0.8;
-    }
-    .sak-modal-title {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 8px;
-    }
-    .sak-modal-subtitle {
-        font-size: 1.1rem;
-        font-weight: 400;
-        margin-bottom: 0;
-        color: #ffe0b2;
-    }
-    .sak-info-box {
-        border-radius: 12px;
-        padding: 18px 18px 14px 18px;
-        margin: 18px 0 0 0;
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        font-size: 1.08rem;
-        background: #fffde7;
-        border: 1.5px solid #ffe0b2;
-        color: #7a5a1a;
-    }
-    .sak-info-box .sak-info-ic { font-size: 1.5rem; color: #ff9800; margin-top: 2px; }
-    .sak-info-box2 {
-        border-radius: 12px;
-        padding: 18px 18px 14px 18px;
-        margin: 14px 0 0 0;
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        font-size: 1.08rem;
-        background: #f3f7ff;
-        border: 1.5px solid #c5dafe;
-        color: #1a237e;
-    }
-    .sak-info-box2 .sak-info-ic { font-size: 1.5rem; color: #3f51b5; margin-top: 2px; }
-    .sak-steps {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 18px 0;
-        justify-content: space-between;
-        margin: 0 0 18px 0;
-        padding: 24px 18px 0 18px;
-    }
-    .sak-step {
-        flex: 0 0 32%;
-        background: none;
-        border-radius: 12px;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        min-width: 120px;
-    }
-    .sak-step-icon {
-        font-size: 2.2rem;
-        border-radius: 50%;
-        width: 54px;
-        height: 54px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 6px;
-    }
-    .sak-step-1 { background: #e3eafd; color: #3f51b5; }
-    .sak-step-2 { background: #e8f5e9; color: #388e3c; }
-    .sak-step-3 { background: #fffde7; color: #ff9800; }
-    .sak-step-title {
-        font-weight: 700;
-        font-size: 1.08rem;
-        margin-bottom: 2px;
-        color: #222;
-        text-align: center;
-    }
-    .sak-step-desc {
-        color: #6b7280;
-        font-size: 0.98rem;
-        text-align: center;
-    }
-    .sak-modal-footer {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        align-items: center;
-        padding: 0 0 24px 0;
-        margin-top: 8px;
-    }
-    .sak-btn-main {
-        background: #3f51b5;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 12px 28px;
-        font-size: 1.08rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-        transition: background 0.2s;
-    }
-    .sak-btn-main:hover { background: #2c387e; }
-    .sak-btn-upload {
-        background: #388e3c;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        padding: 12px 28px;
-        font-size: 1.08rem;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        box-shadow: 0 2px 8px rgba(44,62,80,0.08);
-        transition: background 0.2s;
-    }
-    .sak-btn-upload:hover { background: #256427; }
-    .sak-modal-caption {
-        text-align: center;
-        color: #b26a00;
-        font-size: 1.04rem;
-        margin-bottom: 0;
-        margin-top: 8px;
-    }
-    .sak-modal-footer .bi { font-size: 1.2rem; }
-    @media (max-width: 600px) {
-        .sak-modal { max-width: 99vw; }
-        .sak-steps { flex-direction: column; gap: 10px 0; }
-        .sak-step { flex: 1 1 100%; }
-    }
-    </style>
-    <div id="sakModal" class="sak-modal-bg">
-        <div class="sak-modal">
-            <div class="sak-modal-header">
-                <div class="sak-icon">
-                    <i class="bi bi-exclamation-triangle"></i>
-                </div>
-                <button class="close" id="closeSakModal" aria-label="Close">&times;</button>
-                <div class="sak-modal-title"><span style="font-size:1.2rem;">⚠️</span> Persyaratan Surat Aktif Kuliah</div>
-            </div>
-            <div class="sak-info-box">
-                <span class="sak-info-ic"><i class="bi bi-file-earmark-text"></i></span>
-                <span>Untuk mengajukan Surat Keterangan Aktif Kuliah, Anda wajib melampirkan <b>Form Permohonan</b> yang sudah ditandatangani oleh Ketua Program Studi (Kapordi).</span>
-            </div>
-            <div class="sak-info-box2">
-                <span class="sak-info-ic"><i class="bi bi-tag"></i></span>
-                <span>Formulir dapat diunduh pada halaman 'Form Pengajuan Surat Aktif Kuliah'. Silakan download, isi, dan minta tanda tangan Kaprodi, lalu upload kembali pada form pengajuan.</span>
-            </div>
-            <div style="font-weight:600; text-align:center; margin:24px 0 0 0; font-size:1.15rem;">Langkah-langkah:</div>
-            <div class="sak-steps">
-                <div class="sak-step">
-                    <div class="sak-step-icon sak-step-1"><i class="bi bi-download"></i></div>
-                    <div class="sak-step-title">1. Download Form</div>
-                    <div class="sak-step-desc">Unduh formulir permohonan</div>
-                </div>
-                <div class="sak-step">
-                    <div class="sak-step-icon sak-step-2"><i class="bi bi-patch-check"></i></div>
-                    <div class="sak-step-title">2. Isi & TTD Kaprodi</div>
-                    <div class="sak-step-desc">Lengkapi dan minta tanda tangan</div>
-                </div>
-                <div class="sak-step">
-                    <div class="sak-step-icon sak-step-3"><i class="bi bi-upload"></i></div>
-                    <div class="sak-step-title">3. Upload Form</div>
-                    <div class="sak-step-desc">Unggah form yang sudah lengkap</div>
-                </div>
-            </div>
-            <div class="sak-modal-footer">
-                <a href="<?php echo base_url('uploads/dokumen/Form-Permohonan-Surat-Aktif-Kuliah.docx') ?>" class="sak-btn-main" target="_blank"><i class="bi bi-download"></i> Download Formulir</a>
-                <button id="lanjutPengajuanSak" class="sak-btn-upload"><i class="bi bi-upload"></i> Upload Formulir</button>
-            </div>
-            <div class="sak-modal-caption"><i class="bi bi-lightbulb"></i> Pastikan form sudah ditandatangani Kaprodi sebelum diupload</div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var sakModal = document.getElementById('sakModal');
-            var closeBtn = document.getElementById('closeSakModal');
-            var lanjutBtn = document.getElementById('lanjutPengajuanSak');
-            // Tampilkan modal saat halaman dibuka
-            setTimeout(function(){ sakModal.style.display = 'flex'; sakModal.classList.add('show'); }, 200);
-            if (closeBtn) {
-                closeBtn.onclick = function() {
-                    sakModal.classList.remove('show');
-                    setTimeout(function(){ sakModal.style.display = 'none'; }, 200);
-                };
-            }
-            if (lanjutBtn) {
-                lanjutBtn.onclick = function() {
-                    sakModal.classList.remove('show');
-                    setTimeout(function(){ sakModal.style.display = 'none'; }, 200);
-                    // Scroll ke form pengajuan
-                    var form = document.querySelector('form[action*="store_pengajuan"]');
-                    if(form) form.scrollIntoView({behavior:'smooth', block:'start'});
-                };
-            }
-        });
-    </script>
     <div class="container my-1">
         <header class="page-header text-center">
             <h1>Pengajuan Surat Aktif Kuliah</h1>
@@ -346,9 +93,9 @@
                             <div class="mb-3">
                                 <label for="tahun_akademik_awal" class="form-label label-bold">Tahun Akademik</label>
                                 <div class="d-flex gap-2">
-                                    <input type="text" class="form-control" name="tahun_akademik_awal" placeholder="2024" value="<?= set_value('tahun_akademik_awal', $this->session->flashdata('old_input')['tahun_akademik_awal'] ?? ''); ?>" required>
+                                    <input type="text" class="form-control" name="tahun_akademik_awal" placeholder="2025" value="<?= set_value('tahun_akademik_awal', $this->session->flashdata('old_input')['tahun_akademik_awal'] ?? ''); ?>" required>
                                     <span class="align-self-center">/</span>
-                                    <input type="text" class="form-control" name="tahun_akademik_akhir" placeholder="2025" value="<?= set_value('tahun_akademik_akhir', $this->session->flashdata('old_input')['tahun_akademik_akhir'] ?? ''); ?>" required>
+                                    <input type="text" class="form-control" name="tahun_akademik_akhir" placeholder="2026" value="<?= set_value('tahun_akademik_akhir', $this->session->flashdata('old_input')['tahun_akademik_akhir'] ?? ''); ?>" required>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -358,7 +105,6 @@
 
                                                         <!-- Upload Dokumen -->
                                                         <div class="upload-section-title mb-3">
-                                                            <i class="bi bi-upload me-2"></i>
                                                             Upload Dokumen Persyaratan <span class="small">(Maksimal 2 MB)</span>
                                                         </div>
 
@@ -385,7 +131,6 @@
                             <!-- Tombol Aksi -->
                             <div class="d-grid mt-4">
                                 <button type="submit" class="btn btn-success">Ajukan Permohonan Aktif Kuliah</button>
-                                <button type="reset" class="btn btn-secondary mt-2">Reset Form</button>
                             </div>
                         </form>
 
@@ -434,8 +179,8 @@
                         <ul class="note-list">
                             <li><b>Simpan kode resi pengajuan untuk melacak status surat Anda.</b></li>
                             <li>Pastikan semua persyaratan sudah lengkap sebelum mengisi formulir pengajuan.</li>
-                            <li>Proses verifikasi dan penerbitan surat membutuhkan waktu maksimal 2 hari kerja.</li>
-                            <li>Surat yang sudah diterbitkan dapat diunduh melalui sistem di menu lacak surat.</li>
+                            <li>Proses verifikasi dan penerbitan surat membutuhkan waktu maksimal 1-2 hari kerja.</li>
+                            <li>Surat yang sudah diterbitkan dapat diambil di ruangan pelayanan akademik</li>
                             <li>Untuk pertanyaan lebih lanjut, hubungi bagian administrasi akademik kampus.</li>                             
                         </ul>
                     </div>
