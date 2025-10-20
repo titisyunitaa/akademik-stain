@@ -26,6 +26,8 @@
 <script src="<?php echo base_url('assets/')?>dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="<?php echo base_url('assets/')?>dist/js/demo.js"></script>
+<!-- BS-Stepper -->
+<script src="<?php echo base_url('assets/')?>plugins/bs-stepper/js/bs-stepper.min.js"></script>
 
 <script src="<?php echo base_url('assets/')?>plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?php echo base_url('assets/')?>plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -79,7 +81,12 @@
 
   });
 </script>
-
+<script>
+  // BS-Stepper Init
+  document.addEventListener('DOMContentLoaded', function () {
+    window.stepper = new Stepper(document.querySelector('.bs-stepper'))
+  });
+</script>
 <script>
   $(function () {
     // Summernote
@@ -137,6 +144,8 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+
 
 </body>
 </html>

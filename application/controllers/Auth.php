@@ -47,16 +47,18 @@ class Auth extends CI_Controller {
 					//menyimpan data ke dalam session
 					$this->session->set_userdata($data);
 					if($user['role_id'] == 1){
-						redirect('superadmin/role');
+						redirect('user/index');
 					}elseif($user['role_id'] == 2){
 						redirect('user/index');
 					}elseif($user['role_id'] == 5){
 						redirect('laporan/laporan_surat_mahasiswa');
+					}elseif($user['role_id'] == 7){
+						redirect('laporan/laporan_surat_mahasiswa');
+					}elseif($user['role_id'] == 8){
+						redirect('mahasiswa/index');
 					}
 
 					var_dump($this->session->userdata()); die;
-
-
 				}else{
 					$this->session->set_flashdata('message','<div class="alert alert-danger" role="alert">
 							Password Anda Salah

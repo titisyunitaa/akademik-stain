@@ -12,8 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="<?= base_url('assets/css/auth.css') ?>" rel="stylesheet">
           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-
+          <link rel="stylesheet" href="<?= base_url('assets/css/custom.css')?>">
+          
 
 </head>
 <body>
